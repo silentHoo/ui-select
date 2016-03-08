@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.14.8 - 2016-02-18T22:01:43.792Z
+ * Version: 0.14.9 - 2016-03-08T10:52:18.467Z
  * License: MIT
  */
 
@@ -381,7 +381,7 @@ uis.controller('uiSelectCtrl',
       }
 
       var container = $element.querySelectorAll('.ui-select-choices-content');
-      if (ctrl.$animate && ctrl.$animate.enabled(container[0])) {
+      if (ctrl.$animate && ctrl.$animate.on && ctrl.$animate.enabled(container[0])) {
         ctrl.$animate.on('enter', container[0], function (elem, phase) {
           if (phase === 'close') {
             // Only focus input after the animation has finished
